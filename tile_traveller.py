@@ -6,6 +6,7 @@
 #3.1 If coordinates are the winning coordinates then print out Victory! and stop trunning
 #4. Repeat steps 1. to 3.
 def tile_mover(input):
+    '''Takes a direction as input and changes the coordinates of the user'''
     if input == "N" or input == "n":
         return x, y + 1
     elif input == "S" or input == "s":
@@ -16,6 +17,8 @@ def tile_mover(input):
         return x -1, y
     
 def start_tile():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (N)orth.")
     while True:
         ui = str(input("Direction: "))
@@ -27,6 +30,8 @@ def start_tile():
     return x,y
 
 def middle_left():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (N)orth or (E)ast or (S)outh.")
     while True:
         ui = str(input("Direction: "))
@@ -37,8 +42,9 @@ def middle_left():
             print("Not a valid direction!")
     return x,y
 
-
 def top_left():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (E)ast or (S)outh.")
     while True:
         ui = str(input("Direction: "))
@@ -50,6 +56,8 @@ def top_left():
     return x,y
 
 def middle_top():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (E)ast or (W)est.")
     while True:
         ui = str(input("Direction: "))
@@ -61,6 +69,8 @@ def middle_top():
     return x,y
 
 def middle():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (S)outh or (W)est.")
     while True:
         ui = str(input("Direction: "))
@@ -72,6 +82,8 @@ def middle():
     return x,y
 
 def middle_bottom():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (N)orth.")
     while True:
         ui = str(input("Direction: "))
@@ -82,8 +94,9 @@ def middle_bottom():
             print("Not a valid direction!")
     return x,y
 
-
 def top_right():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (S)outh or (W)est.")
     while True:
         ui = str(input("Direction: "))
@@ -95,6 +108,8 @@ def top_right():
     return x,y
 
 def middle_right():
+    '''Tells the user where he can go and recives an input from the user,
+    which tells the program where the user wants to go'''
     print("You can travel: (N)orth or (S)outh.")
     while True:
         ui = str(input("Direction: "))
@@ -124,4 +139,5 @@ while (x == 3 and y == 1) == False:
         x, y = middle_right()
     elif x == 3 and y == 3:
         x, y = top_right()
+
 print("Victory!")
